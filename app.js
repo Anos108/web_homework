@@ -23,6 +23,11 @@ function applyHHMMSSToClock(date) {
   if (secondsEl) secondsEl.textContent = ss;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function tickClock() {
   applyHHMMSSToClock(getSystemTime());
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  tickClock();
+  setInterval(tickClock, 1000);
 });
