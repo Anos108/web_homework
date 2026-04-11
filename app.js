@@ -23,11 +23,28 @@ function applyHHMMSSToClock(date) {
   if (secondsEl) secondsEl.textContent = ss;
 }
 
+const TICK_MS = 1000;
+
 function tickClock() {
   applyHHMMSSToClock(getSystemTime());
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+let clockIntervalId = null;
+
+function startClockTick() {
   tickClock();
-  setInterval(tickClock, 1000);
+  if (clockIntervalId !== null) {
+    clearInterval(clockIntervalId);
+  }
+  clockIntervalId = setInterval(tickClock, TICK_MS);
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    tickClock();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  startClockTick();
 });
