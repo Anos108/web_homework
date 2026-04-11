@@ -7,15 +7,27 @@
 body {
   margin: 0;
   font-family: "JetBrains Mono", ui-monospace, monospace;
+  color: #e6edf3;
+  background: radial-gradient(ellipse 120% 80% at 50% 35%, #1c2735 0%, #0d1117 52%);
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-font-smoothing: antialiased;
 }
 
 .clock-display {
   display: inline-flex;
   align-items: center;
   gap: 0.15em;
+  font-size: clamp(2.25rem, 5vw + 1.25rem, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #f0f6fc;
+}
+
+.clock-sep {
+  color: #6e7681;
+  font-weight: 400;
 }
