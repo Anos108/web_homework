@@ -47,12 +47,15 @@ body {
   font-weight: 600;
   letter-spacing: 0.03em;
   color: #f0f6fc;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
   user-select: none;
   -webkit-user-select: none;
 }
 
 .clock-sep {
-  color: #6e7681;
+  color: #8b949e;
   font-weight: 400;
 }
 
@@ -73,5 +76,11 @@ body {
 @media (max-height: 480px) and (orientation: landscape) {
   .clock-display {
     font-size: clamp(1.5rem, 7vh + 0.5rem, 2.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-image: none;
   }
 }
