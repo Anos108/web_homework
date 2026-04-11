@@ -6,13 +6,21 @@
 
 html {
   overflow-x: hidden;
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   color: #e6edf3;
-  background: radial-gradient(ellipse 120% 80% at 50% 35%, #1c2735 0%, #0d1117 52%);
+  background-color: #0d1117;
+  background-image: radial-gradient(
+    ellipse 120% 80% at 50% 35%,
+    #1c2735 0%,
+    #0d1117 52%
+  );
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
@@ -23,6 +31,7 @@ body {
     max(1rem, env(safe-area-inset-bottom, 0px))
     max(1.25rem, env(safe-area-inset-left, 0px));
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .clock-display {
