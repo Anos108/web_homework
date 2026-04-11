@@ -1,2 +1,2 @@
 # web_homework
-This is my HW haha nnn
+A clock website that uses your devices clock to display.
