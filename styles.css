@@ -9,6 +9,7 @@ html {
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
     #0d1117 52%
   );
   min-height: 100vh;
+  min-height: 100svh;
   min-height: 100dvh;
   display: flex;
   align-items: center;
@@ -32,6 +34,8 @@ body {
     max(1.25rem, env(safe-area-inset-left, 0px));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .clock-display {
@@ -43,6 +47,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.03em;
   color: #f0f6fc;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .clock-sep {
